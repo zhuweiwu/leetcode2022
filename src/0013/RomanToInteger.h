@@ -62,7 +62,32 @@ public:
 
     static int RomanToInteger(string s)
     {
-        
+        int len = s.length();
+
+        if(len <1)
+        {
+            return 0;
+        }
+
+        int res = ConvertCharToNumber(s[0]);
+
+        for(int i = 1; i < len ; i++)
+        {
+            int prev = ConvertCharToNumber(s[i-1]);
+            int cur = ConvertCharToNumber(s[i]);
+
+            if(prev >= cur)
+            {
+                res = res + cur;
+            }
+            else
+            {
+                res = res - prev + (cur  - prev);
+            }
+        }
+
+        return res;
+
     }
 };
 
