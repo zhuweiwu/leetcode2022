@@ -19,7 +19,7 @@ class PlusOneClass
 {
 
 public:
-    static vector<int> plusOne(vector<int>& digits)
+    static vector<int> PlusOne(vector<int>& digits)
     {
         vector<int> res;
         if(digits.size() == 0)
