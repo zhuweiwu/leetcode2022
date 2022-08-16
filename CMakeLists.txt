@@ -20,33 +20,34 @@ project(Leetcode
 #-Wall warning all
 #-w ignore all warning
 #-Werror make all warning to error
-SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -std=c++17 -O0 -w -g")
-SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -std=c++17 -O0 -w -g")
-SET(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -std=c++17 -O0 -w -g")
+#SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -std=c++17 -O0 -w -g")
+#SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -std=c++17 -O0 -w -g")
+#SET(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -std=c++17 -O0 -w -g")
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 find_package(GTest REQUIRED)
 
-if(GTest_FOUND)
-    message("GTest lib found")
-else()
-    message( FATAL_ERROR "Cannot find GTest")
-endif()
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+
+include_directories("${PROJECT_SOURCE_DIR}/src/Bean")
+include_directories("${PROJECT_SOURCE_DIR}/src/Easy")
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/Bean)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/Easy)
+#(${PROJECT_SOURCE_DIR}/src/*)
+
+#include_directories(${GTEST_INCLUDE_DIRS})
 
 
 
-FILE(GLOB SOURCES "src/*/*")
-FILE(GLOB Test_SOURCES "test/src/*/*" "test/src/*")
+add_subdirectory(./test)
 
-SET(LOCAL_INCLUE /usr/local/include)
-
-
-include_directories(${GTEST_INCLUDE_DIRS} ${LOCAL_INCLUE})
-
-
-
-
-
-add_executable(unittest "./test/unittest.cpp" ${SOURCES} ${Test_SOURCES})
-target_link_libraries(unittest ${GTEST_LIBRARIES}  pthread)
-set_target_properties( unittest PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/test/bin)
+#add_executable(unittest "./test/unittest.cpp" ${Test_SOURCES})
+#target_link_libraries(unittest ${GTEST_LIBRARIES}  pthread)
+#set_target_properties( unittest PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/test/bin)

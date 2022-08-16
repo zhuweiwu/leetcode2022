@@ -1,8 +1,8 @@
 #include "gtest/gtest.h"
 #include <string>
-#include "../../../src/0118/PascalTriangle.h"
+#include <0118_PascalTriangle.h>
 #include <vector>
-#include "../CheckEqual.h"
+#include "CheckEqual.h"
 
 
 TEST(PascalTriangleUnitTest, Test1)

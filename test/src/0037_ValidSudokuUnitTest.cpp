@@ -1,8 +1,8 @@
 #include "gtest/gtest.h"
 #include <string>
-#include "../../../src/0037/ValidSodoku.h"
+#include <0037_ValidSodoku.h>
 #include <vector>
-#include "../CheckEqual.h"
+#include "CheckEqual.h"
 
 TEST(ValidSudokuUnitTest, Test1)
 {

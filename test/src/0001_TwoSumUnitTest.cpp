@@ -1,8 +1,8 @@
 #include "gtest/gtest.h"
 #include <string>
-#include "../../../src/0001/TwoSum.h"
+#include <0001_TwoSum.h>
 #include <vector>
-#include "../CheckEqual.h"
+#include "CheckEqual.h"
 
 
 TEST(TwoSumUnitTest, Test1)
