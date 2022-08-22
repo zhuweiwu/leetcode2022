@@ -12,13 +12,14 @@
 #ifndef _INTERSECTIONOFTWOLIST_H_
 #define _INTERSECTIONOFTWOLIST_H_
 
-#include "../ListNode.h"
+#include <ListNode.h>
+
 
 class IntersectionOfTwoList
 {
 public:
 
-    int GetLen(ListNode * head)
+    static int GetLen(ListNode * head)
     {
         int len = 0;
         while(head != nullptr)
@@ -29,7 +30,7 @@ public:
         return len;
     }
 
-    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
+    static ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
     {
         if(headA == nullptr || headB == nullptr)
         {

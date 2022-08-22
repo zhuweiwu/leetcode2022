@@ -38,8 +38,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 include_directories("${PROJECT_SOURCE_DIR}/src/Bean")
 include_directories("${PROJECT_SOURCE_DIR}/src/Easy")
-add_subdirectory(${PROJECT_SOURCE_DIR}/src/Bean)
-add_subdirectory(${PROJECT_SOURCE_DIR}/src/Easy)
+
+#add_subdirectory(${PROJECT_SOURCE_DIR}/src/Bean)
+#add_subdirectory(${PROJECT_SOURCE_DIR}/src/Easy)
 #(${PROJECT_SOURCE_DIR}/src/*)
 
 #include_directories(${GTEST_INCLUDE_DIRS})
