@@ -16,6 +16,9 @@ project(Leetcode
 # debug
 #SET(CMAKE_BUILD_TYPE "Release") 
 
+SET(CMAKE_BUILD_TYPE "Debug")
+
+message("Current Build Type " ${CMAKE_BUILD_TYPE})
 
 #-Wall warning all
 #-w ignore all warning

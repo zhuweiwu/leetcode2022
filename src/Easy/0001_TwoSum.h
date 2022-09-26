@@ -21,6 +21,12 @@ class TwoSumClass
 {
 
 public:
+    /**
+    * @brief 
+    * @param  nums             My Param doc
+    * @param  target           My Param doc
+    * @return vector<int> 
+    */
     static vector<int> TwoSum(vector<int>& nums, int target);
 };
 

@@ -1,4 +1,5 @@
 #include "gtest/gtest.h"
+#include <algorithm>
 #include <string>
 #include <0001_TwoSum.h>
 #include <vector>
@@ -12,6 +13,10 @@ TEST(TwoSumUnitTest, Test1)
     vector<int> res = TwoSumClass::TwoSum(nums, target);
 
     bool isEqual = CheckEqual::CheckVector(res, vector<int>{0,2});
+
+    for (auto item : res) {
+    
+    }
 
     EXPECT_TRUE(isEqual);
     
