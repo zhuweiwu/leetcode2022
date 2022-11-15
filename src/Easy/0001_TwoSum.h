@@ -36,7 +36,7 @@ public:
  * @param  target           two sum target
  * @return vector<int> index of two number
  */
-vector<int> TwoSumClass::TwoSum(vector<int>& nums, int target)
+inline vector<int> TwoSumClass::TwoSum(vector<int>& nums, int target)
 {
     vector<int> res;
     if(nums.size() < 2)

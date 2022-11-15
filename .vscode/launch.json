@@ -37,8 +37,7 @@
             "program": "${command:cmake.launchTargetPath}",
             "args": [],
             "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal"
-            
+            "console": "integratedTerminal"            
           }
         ]
 
